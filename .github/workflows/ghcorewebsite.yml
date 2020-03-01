@@ -43,4 +43,4 @@ jobs:
   # Azure logout
     - name: logout
   run: |
-       az logout
+    az logout
