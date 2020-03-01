@@ -29,6 +29,6 @@ jobs:
       with:
         creds: ${{ secrets.AZURE_CREDS }}
       
-    - run:
+    - run: |
         az group create -n ${{ env.AZURE_GROUP_NAME }} -l westus
         az group deployment create -n ghaction -g ${{ env.AZURE_GROUP_NAME }} --template-file ./src/infra/azureres.json --parameters webAppName=${{ env.AZURE_WEBAPP_NAME }}
